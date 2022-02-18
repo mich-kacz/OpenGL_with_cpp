@@ -14,8 +14,8 @@ class SingleLinkedList
 
 
         void getTail(ListElement_s *&tail);
-        void getTail(ListElement_s *&tail, ListElement_s *prevTail);
-        void getByIndex(ListElement_s *node, unsigned int index);
+        void getTail(ListElement_s *&tail, ListElement_s *&prevTail);
+        void getByIndex(ListElement_s *&node, unsigned int index);
 
         unsigned int index;
 
@@ -45,7 +45,7 @@ void SingleLinkedList<MyStruct>::getTail(ListElement_s *&tail)
 }
 
 template<typename MyStruct>
-void SingleLinkedList<MyStruct>::getTail(ListElement_s *&tail, ListElement_s *prevTail)
+void SingleLinkedList<MyStruct>::getTail(ListElement_s *&tail, ListElement_s *&prevTail)
 {
     tail = ListElement;
     while(tail->next != nullptr)
@@ -56,7 +56,7 @@ void SingleLinkedList<MyStruct>::getTail(ListElement_s *&tail, ListElement_s *pr
 }
 
 template<typename MyStruct>
-void SingleLinkedList<MyStruct>::getByIndex(ListElement_s *node, unsigned int index)
+void SingleLinkedList<MyStruct>::getByIndex(ListElement_s *&node, unsigned int index)
 {
     node = ListElement;
     while((node->next != nullptr) && (node->index != index))
@@ -126,7 +126,6 @@ void SingleLinkedList<MyStruct>::deleteList()
         while(ListElement->next != nullptr)
         {
             pop();
-            std::cout<<"POP\n";
         }
         delete ListElement;
         ListElement = nullptr;
@@ -152,5 +151,5 @@ MyStruct SingleLinkedList<MyStruct>::getElement(unsigned int index)
 
     getByIndex(node, index);
 
-    return node.userObject;
+    return node->userObject;
 }

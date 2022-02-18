@@ -6,7 +6,7 @@ struct ObiektTestowy
 {
     int width;
     int height;
-    //char text[3];
+    char text[3];
 };
 
 int main()
@@ -15,23 +15,22 @@ int main()
     SingleLinkedList<ObiektTestowy> LinkedList;
 
 
-    for(int i = 0; i<2; i++)
+    for(int i = 0; i<10; i++)
     {
         obiektTestowy.height = i + 1;
         obiektTestowy.width = i + 10;
-        //obiektTestowy.text[0] = 48 + i;
+        obiektTestowy.text[0] = 52 + i;
 
         LinkedList.push(obiektTestowy);
     }
 
-    for(int i = 0; i<2; i++)
+    for(int i = 0; i<10; i++)
     {
-        obiektTestowy = LinkedList.getElement();
+        obiektTestowy = LinkedList.getElement(i);
         std::cout<<"Numer: "<< i << ", wartość height: " << obiektTestowy.height << std::endl;
         std::cout<<"Numer: "<< i << ", wartość width: " << obiektTestowy.width << std::endl;
-       // std::cout<<"Numer: "<< i << ", wartość text: " << obiektTestowy.text << std::endl;
+        std::cout<<"Numer: "<< i << ", wartość text: " << obiektTestowy.text << std::endl;
     }
-
     LinkedList.deleteList();
 
     return 0;
