@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/michal/Pulpit/projekt_cpp_gra/src/window/window.cpp
+GL/gl.h
+-
+iostream
+-
+window.hpp
+/home/michal/Pulpit/projekt_cpp_gra/src/window/window.hpp
+
+/home/michal/Pulpit/projekt_cpp_gra/src/window/window.hpp
+GLFW/glfw3.h
+-
+string
+-
+

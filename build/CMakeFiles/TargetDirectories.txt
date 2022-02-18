@@ -1,0 +1,4 @@
+/home/michal/Pulpit/projekt_cpp_gra/build/CMakeFiles/rebuild_cache.dir
+/home/michal/Pulpit/projekt_cpp_gra/build/CMakeFiles/edit_cache.dir
+/home/michal/Pulpit/projekt_cpp_gra/build/CMakeFiles/OpenGL_cpp.dir
+/home/michal/Pulpit/projekt_cpp_gra/build/CMakeFiles/MY_LIBRARIES.dir

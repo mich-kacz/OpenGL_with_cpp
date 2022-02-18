@@ -1,0 +1,2 @@
+/usr/bin/ar qc libMY_LIBRARIES.a  CMakeFiles/MY_LIBRARIES.dir/src/window/window.cpp.o
+/usr/bin/ranlib libMY_LIBRARIES.a
